@@ -126,6 +126,28 @@
     flex-direction: column;
     gap: 4rem;
   }
+  #theme-btn{
+    padding:10px 20px;
+    margin:15px;
+    margin-left: 1000px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+  }
+  
+  .dark{
+    background:black;
+    color:white;
+  }
+  
+  .dark .box{
+    background:#222;
+    color:white;
+  }
+  
+  .dark .title{
+    color:white;
+  }
   
   .hide {
     display: none;

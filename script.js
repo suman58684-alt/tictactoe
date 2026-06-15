@@ -3,6 +3,19 @@ let resetBtn = document.querySelector("#reset-btn");
 let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let themeBtn = document.querySelector("#theme-btn");
+let clickSound = document.querySelector("#click-sound");
+let winSound = document.querySelector("#win-sound");
+
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    themeBtn.innerText = "☀️ Light Mode";
+  }else{
+    themeBtn.innerText = "🌙 Dark Mode";
+  }
+});
 
 let turnO = true;
 let count = 0; 
@@ -27,6 +40,8 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+clickSound.play();
     if (turnO) {
       //playerO
       box.innerText = "O";
@@ -71,6 +86,7 @@ const enableBoxes = () => {
 
 const showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
+  winSound.play();
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
