@@ -115,9 +115,6 @@
     border: none;
   }
   
-  #msg {
-    color: #ffffc7;
-    font-size: 5vmin;
   
     #msg{
       color: #fff;
@@ -141,8 +138,6 @@
       }
   }
   
-  .msg-container {
-    height: 100vmin;
   
   .msg-container{
     position: fixed;
@@ -155,8 +150,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
-  }
 
     gap: 2rem;
 
@@ -196,7 +189,7 @@
     display: none;
   }
   
-    @media (max-width:600px){
+  @media (max-width:600px){
 
     .title{
         font-size: 2rem;
