@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(179, 35, 179);
+    text-align: center;
+      }
+  
+  .container {
+    height: 70vh;
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .game {
+    height: 50vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vmin;
+  }
+  
+  .box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 0rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: transparent;
+    background-color: white;
+  }
+  @keyframes glow {
+    0% {
+        text-shadow: 0 0 5px currentColor;
+    }
+    50% {
+        text-shadow:
+            0 0 5px currentColor,
+            0 0 2px currentColor,
+            0 0 2px currentColor;
+    }
+    100% {
+        text-shadow: 0 0 2px currentColor;
+    }
+}
+
+.x {
+    color: white;
+    animation: glow 1s infinite;
+}
+
+.o {
+    color: magenta;
+    animation: glow 1s infinite;
+}
+  
+  #reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+  }
+  .title{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(103, 27, 27);
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 80px #ff00ff;
+
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow{
+    from{
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #ff00ff,
+            0 0 40px #ff00ff;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #ff00ff,
+            0 0 80px #ff00ff,
+            0 0 120px #ff00ff;
+    }
+}
+  
+  #new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+  }
+  
+  #msg {
+    color: #ffffc7;
+    font-size: 5vmin;
+  }
+  
+  .msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  
